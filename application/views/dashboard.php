@@ -38,11 +38,11 @@
               <a href="#" class="list-group-item active" style="text-align: center;background-color: #3e4d66;border-color: #3e4d66">
                 ADMINISTRATOR
               </a>
-              <a href="dashboard" class="list-group-item"><i class="fa fa-dashboard"></i> Dashboard</a>
-              <a href="buku" class="list-group-item"><i class="fa fa-book"></i> Buku Tamu</a>
+              <a href="<?php echo base_url() ?>dashboard" class="list-group-item"><i class="fa fa-dashboard"></i> Dashboard</a>
+              <a href="<?php echo base_url() ?>buku" class="list-group-item"><i class="fa fa-book"></i> Buku Tamu</a>
               <a href="#" class="list-group-item"><i class="fa fa-bar-chart"></i> Statistik</a>
               <a href="#" class="list-group-item"><i class="fa fa-file"></i> Dokumentasi</a>
-              <a href="about" class="list-group-item"><i class="fa fa-info"></i> About</a>
+              <a href="#about" class="list-group-item"><i class="fa fa-info"></i> About</a>
             </div>
         </div>
         <div class="col-md-9">

@@ -11,7 +11,7 @@
       <div class="container">
         <div class="navbar-header">
           
-          <a class="navbar-brand" href="dashboard">Buku Tamu PGASCOM</a>
+          <a class="navbar-brand text-white" href="dashboard">Buku Tamu PGASCOM</a>
           <style type="text/css">
             .navbar-inverse{
               background-color: #3e4d66
@@ -38,6 +38,8 @@
                     <th>Nama Tamu</th>
                     <th>Instansi</th>
                     <th>Tanggal Berkunjung</th>
+                    <th>Jam Datang</th>
+                    <th>Bertemu Dengan</th>
                     <th>Keperluan</th>
                     <th>Options</th>
                   </tr>
@@ -55,10 +57,14 @@
                     <td><?php echo $hasil->nama_tamu ?></td>
                     <td><?php echo $hasil->instansi ?></td>
                     <td><?php echo $hasil->tanggal_berkunjung ?></td>
+                    <td><?php echo $hasil->jam_datang ?></td>
+                    <td><?php echo $hasil->bertemu ?></td>
                     <td><?php echo $hasil->keperluan ?></td>
                     <td>
-                        <a href="<?php echo base_url() ?>buku/edit/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-success">Edit</a>
-                        <a href="<?php echo base_url() ?>buku/hapus/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-danger">Hapus</a>
+                        <div class="btn-group">
+                            <a href="<?php echo base_url() ?>buku/edit/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-success">Edit</a>
+                            <a href="<?php echo base_url() ?>buku/hapus/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-danger">Hapus</a>
+                        </div>
                     </td>
                   </tr>
 
@@ -76,8 +82,8 @@
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
 <script>
     $('#table').DataTable( {
-    autoFill: true
-} );
+        autoFill: true
+    } );
 </script>
 </body>
 </html>

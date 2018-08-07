@@ -39,21 +39,21 @@ class Buku extends CI_Controller {
     {
         $data = array(
 
-            'no_telp'       => $this->input->post("no_telp"),
+            'no_telp'           => $this->input->post("no_telp"),
             'nama_tamu'         => $this->input->post("nama_tamu"),
             'instansi'          => $this->input->post("instansi"),
-            'tanggal_berkunjung'    => $this->input->post("tanggal_berkunjung"),
+            'tanggal_berkunjung'=> date('Y-m-d'),
             'keperluan'         => $this->input->post("keperluan"),
-
+            'bertemu'           => $this->input->post("bertemu"),
+            'jam_datang'              => date('h:i:s')
         );
 
         $this->model_buku->simpan($data);
 
-        $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil disimpan didatabase.
-                                                </div>');
+        $_SESSION['success'] = "Data berhasil disimpan!";
 
         //redirect
-        redirect('buku/');
+        redirect(base_url());
 
     }
 
@@ -86,7 +86,7 @@ class Buku extends CI_Controller {
 
         $this->model_buku->update($data, $id);
 
-        $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil diupdate didatabase.
+        $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil diupdate di database.
                                                 </div>');
 
         //redirect
@@ -99,6 +99,9 @@ class Buku extends CI_Controller {
         $id['id_buku'] = $this->uri->segment(3);
 
         $this->model_buku->hapus($id);
+
+        $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil dihapus di database.
+                                                </div>');
 
         //redirect
         redirect('buku/');

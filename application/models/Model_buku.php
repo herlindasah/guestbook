@@ -65,4 +65,10 @@ class Model_buku extends CI_model{
 
     }
 
+    public function get_pegawai()
+    {
+        $this->db->distinct();
+        return $this->db->get('tbl_buku')->result();
+    }
+
 }
