@@ -17,12 +17,18 @@
             <span class="icon-bar"></span>
           </button>
           
-          <a class="navbar-brand" href="dashboard">Buku Tamu PGASCOM</a>
+          <a class="navbar-brand" href="<?php echo base_url() ?>dashboard">Buku Tamu PGASCOM</a>
           <style type="text/css">
             .navbar-inverse{
               background-color: #3e4d66
             }
           </style>
+          <ul class="nav navbar-nav">
+                <li class="active"><a href="<?php echo base_url() ?>dashboard">Home</a></li>
+                <li><a href="<?php echo base_url() ?>buku">Buku Tamu</a></li>
+                <li><a href="#">Statistik & Report</a></li> 
+                <li><a href="#">About</a></li> 
+              </ul>
 
         </div>
         <div id="navbar" class="navbar-collapse collapse">
@@ -34,7 +40,7 @@
 <div class="container" style="margin-top: 80px">
     <div class="row">
         <div class="col-md-3">
-            <div class="list-group">
+            <!-- <div class="list-group">
               <a href="#" class="list-group-item active" style="text-align: center;background-color: #3e4d66;border-color: #3e4d66">
                 ADMINISTRATOR
               </a>
@@ -43,7 +49,7 @@
               <a href="#" class="list-group-item"><i class="fa fa-bar-chart"></i> Statistik</a>
               <a href="#" class="list-group-item"><i class="fa fa-file"></i> Dokumentasi</a>
               <a href="#about" class="list-group-item"><i class="fa fa-info"></i> About</a>
-            </div>
+            </div> -->
         </div>
         <div class="col-md-9">
             <div class="panel panel-default">

@@ -11,7 +11,7 @@
       <div class="container">
         <div class="navbar-header">
           
-          <a class="navbar-brand text-white" href="dashboard">Buku Tamu PGASCOM</a>
+          <a class="navbar-brand text-white" href="<?php echo base_url() ?>dashboard">Buku Tamu PGASCOM</a>
           <style type="text/css">
             .navbar-inverse{
               background-color: #3e4d66
@@ -63,7 +63,10 @@
                     <td>
                         <div class="btn-group">
                             <a href="<?php echo base_url() ?>buku/edit/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-success">Edit</a>
-                            <a href="<?php echo base_url() ?>buku/hapus/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-danger">Hapus</a>
+                            <a href="<?php echo base_url() ?>buku/hapus/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal_hapus">Hapus</a>
+                        
+                            </div>
+                        </div>
                         </div>
                     </td>
                   </tr>
@@ -75,6 +78,22 @@
         </div>
 
     </div>
+
+     <div class="modal fade" id="modal_hapus" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                             <h4 class="modal-title">Perhatian!</h4>
+                                         </div>
+                                         <div class="modal-body">
+                                            <p>Apakah anda yakin ingin menghapus data ini?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn btn-danger">Hapus</button>
+                                        </div>
+                                    </div>
+                                </div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
