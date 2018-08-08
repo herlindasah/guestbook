@@ -23,7 +23,7 @@
               background-color: #3e4d66
             }
           </style>
-          <ul class="nav navbar-nav">
+              <ul class="nav navbar-nav">
                 <li class="active"><a href="<?php echo base_url() ?>dashboard">Home</a></li>
                 <li><a href="<?php echo base_url() ?>buku">Buku Tamu</a></li>
                 <li><a href="#">Statistik & Report</a></li> 
