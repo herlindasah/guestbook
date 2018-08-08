@@ -39,22 +39,12 @@
     </nav>
 <div class="container" style="margin-top: 80px">
     <div class="row">
-        <div class="col-md-3">
-            <!-- <div class="list-group">
-              <a href="#" class="list-group-item active" style="text-align: center;background-color: #3e4d66;border-color: #3e4d66">
-                ADMINISTRATOR
-              </a>
-              <a href="<?php echo base_url() ?>dashboard" class="list-group-item"><i class="fa fa-dashboard"></i> Dashboard</a>
-              <a href="<?php echo base_url() ?>buku" class="list-group-item"><i class="fa fa-book"></i> Buku Tamu</a>
-              <a href="#" class="list-group-item"><i class="fa fa-bar-chart"></i> Statistik</a>
-              <a href="#" class="list-group-item"><i class="fa fa-file"></i> Dokumentasi</a>
-              <a href="#about" class="list-group-item"><i class="fa fa-info"></i> About</a>
-            </div> -->
+
         </div>
         <div class="col-md-9">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-dashboard"></i> Dashboard</h3>
+                <h3 class="panel-title"><i class="fa fa-dashboard"></i>Dashboard</h3>
               </div>
               <div class="panel-body">
                 Selamat datang <b><?php echo $this->session->userdata("user_nama") ?></b> di halaman Administrator System
