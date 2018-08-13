@@ -107,41 +107,5 @@
         autoFill: true
     } );
 </script>
-
-<script type="text/javascript">
-    var page = 1;
-    $(window).scroll(function() {
-        if($(window).scrollTop() + $(window).height() >= $(document).height()) {
-            page++;
-            loadMoreData(page);
-        }
-    });
-
-
-    function loadMoreData(page){
-      $.ajax(
-            {
-                url: '?page=' + page,
-                type: "get",
-                beforeSend: function()
-                {
-                    $('.ajax-load').show();
-                }
-            })
-            .done(function(data)
-            {
-                if(data == " "){
-                    $('.ajax-load').html("No more records found");
-                    return;
-                }
-                $('.ajax-load').hide();
-                $("#post-data").append(data);
-            })
-            .fail(function(jqXHR, ajaxOptions, thrownError)
-            {
-                  alert('server not responding...');
-            });
-    }
-    </script>
 </body>
 </html>

@@ -115,6 +115,11 @@
             <?php echo form_close() ?>
         </div>
     </div>
+
+    <div class="footer" align="center">
+    <br>
+    <p>Copyright by PGN COM</p>
+
 </body>
 
 <?php if (isset($_SESSION['error'])): ?>
