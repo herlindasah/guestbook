@@ -51,7 +51,7 @@
 
 <body>
     <div class="container" style="margin-top: 80px">
-        <div class="col-md-8 offset-2">
+        <div class="col-lg-8 offset-lg-2">
 
             <?php echo form_open('buku/simpan') ?>
               <div class="form-group">
