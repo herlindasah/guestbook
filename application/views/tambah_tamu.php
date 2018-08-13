@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- HAYO MAU NGAPAIN NGINTIP-NGINTIP ?? ^^, -->
-<!-- BELAJAR YANG RAJIN YA !! -->
-<!-- #MayTheCodeBuiltinYou -->
-<!-- <> with ❤ by Erik si anak magang-->
-<!-- ga usah bilang-bilang abis liat ini ^^, -->
 <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <link rel="shortcut icon" href="<?php echo base_url('assets/pgn.jpg')?>"/>
+    <link rel="shortcut icon" href="<?php echo base_url('assets/img/pgn.jpg')?>"/>
   <title><?php echo $title ?></title>
-    <meta name="description" content="Sistem informasi permohonan kendaraan operasional Gasnet PGASCOM">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
@@ -52,47 +46,7 @@
     <script type="text/javascript" src="<?php echo base_url()?>assets/js/bootstrap-datepicker.id.min.js"></script>
     <!-- Other plugin end -->
 
-    <style>
-        #loader {
-            border: 16px solid #f3f3f3;
-            border-radius: 50%;
-            border-top: 16px solid #3498db;
-            width: 48px;
-            height: 48px;
-            -webkit-animation: spin 2s linear infinite;
-            animation: spin 2s linear infinite;
-            display: none;
-            position: relative;
-        }
-
-        @-webkit-keyframes spin {
-            0% { -webkit-transform: rotate(0deg); }
-            100% { -webkit-transform: rotate(360deg); }
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .checkbox-rounded [type="checkbox"][class*='filled-in']+label:after {
-            border-radius: 50%;
-        }
-
-        .app {
-            margin-top: 70px;
-            margin-bottom: 80px;
-        }
-
-        .form-app {
-            margin-top: 80px;
-            margin-bottom: 80px;
-        }
-
-        .login {
-            margin-top: 100px !important;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/style.css">
 </head>
 
 <body>
@@ -131,7 +85,7 @@
               </div>
 
               <div class="form-group">
-                <label for="text">Tujuan</label>
+                <label for="text">Keperluan</label>
                 <div class="input-group">
                   <input type="text" class="form-control" name="keperluan" placeholder="Purpose" required>
                   <div class="input-group-append">
@@ -162,6 +116,7 @@
         </div>
     </div>
 </body>
+
 <?php if (isset($_SESSION['error'])): ?>
             <script>
               swal({

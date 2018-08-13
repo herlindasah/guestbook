@@ -2,9 +2,27 @@
 <html>
 <head>
     <title><?php echo $title ?></title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
-</head>
+     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
 <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+         <a class="navbar-brand" href="<?php echo base_url() ?>dashboard">Buku Tamu PGN COM</a>
+              <ul class="nav navbar-nav">
+                <li><a href="<?php echo base_url() ?>dashboard">Home</a></li>
+                <li class="active"><a href="<?php echo base_url() ?>buku">Buku Tamu</a></li>
+                <li><a href="#">Statistik & Report</a></li> 
+                <li><a href="#">About</a></li>
+              </ul>
+
+        </div>
+         <div class="navbar-form navbar-right">
+                <a href="<?php echo base_url() ?>index.php/dashboard/logout" type="submit" class="btn btn-success"><i class="fa fa-sign-out"></i> Logout</a>
+            </div>
+      </div>
+    </nav>
 
     <div class="container" style="margin-top: 80px">
         <div class="col-md-12">
@@ -42,7 +60,10 @@
         </div>
     </div>
 
+     <div class="footer" align="center">
+      <br>
+     <p>Copyright by PGN COM</p>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
