@@ -68,19 +68,34 @@
                     <td>
                         <div class="btn-group">
                             <a href="<?php echo base_url() ?>buku/edit/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-success">Edit</a>
-                            <a href="<?php echo base_url() ?>buku/hapus/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal">Hapus</a>
+                            <a href="<?php echo base_url() ?>buku/hapus/<?php echo $hasil->id_buku ?>" data-toggle="modal" data-target="#modalHapus" class="btn confirm-delete btn-sm btn-danger">Hapus</a>
                             </div>
                     </td>
                   </tr>
 
                 <?php } ?>
 
+                <!-- modal Hapus -->
+                 <div id="modalHapus" tabindex="-1" role="dialog" class="modal fade">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3>Perhatian!</h3>
+                            </div>
+                            <div class="modal-body">
+                                <p>Apakah anda yakin ingin menghapus data tamu ini?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" id="btnDel" class="btn btn-danger">Delete</a>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true" class="btn secondary">Cancel</a>
+                                    </div>
+                                </div>
                 </tbody>
               </table>
         </div>
     </div>
 
-     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+     <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -95,7 +110,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
 <div class="footer navbar fixed-bottom navbar-expand-sm navbar-dark text-center bg-dark" align="center">
     <br>
@@ -107,10 +122,34 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
 <script>
     $('#table').DataTable( {
         autoFill: true
     } );
 </script>
+
+<!-- Function hapus -->
+<script>
+   $('#modalHapus').on('show', function() {
+    var id = $(this).data('id'),
+        removeData = $(this).find('.danger');
+})
+
+$('.confirm-delete').on('click', function(e) {
+    e.preventDefault();
+
+    var id = $(this).data('id');
+    $('#modalHapus').data('id', id).modal('show');
+});
+
+$('#btnDel').click(function() {
+    // handle deletion here
+    var id = $('#modalHapus').data('id');
+    $('[id-buku='+id+']').remove();
+    $('#modalHapus').modal('hide');
+}); 
+</script>
+
 </body>
 </html>

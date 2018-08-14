@@ -100,9 +100,6 @@ class Buku extends CI_Controller {
 
         $this->model_buku->hapus($id);
 
-        $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil dihapus di database.
-                                                </div>');
-
         //redirect
         redirect('buku/');
 
