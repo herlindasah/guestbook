@@ -45,12 +45,12 @@ class Buku extends CI_Controller {
             'tanggal_berkunjung'=> date('Y-m-d'),
             'keperluan'         => $this->input->post("keperluan"),
             'bertemu'           => $this->input->post("bertemu"),
-            'jam_datang'              => date('h:i:s')
+            'jam_datang'        => (date('h')-5).date(':i:s')
         );
 
         $this->model_buku->simpan($data);
 
-        $_SESSION['success'] = "Data berhasil disimpan!";
+        $_SESSION['success'] = "Data berhasil diupdate!";
 
         //redirect
         redirect(base_url());
@@ -86,8 +86,7 @@ class Buku extends CI_Controller {
 
         $this->model_buku->update($data, $id);
 
-        $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil diupdate di database.
-                                                </div>');
+        $_SESSION['success'] = "Data berhasil disimpan!";
 
         //redirect
         redirect('buku/');

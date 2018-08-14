@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
+    <script type="text/javascript" src="<?php echo base_url()?>assets/js/sweetalert.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-inverse fixed-top">
@@ -68,8 +69,8 @@
                     <td>
                         <div class="btn-group">
                             <a href="<?php echo base_url() ?>buku/edit/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-success">Edit</a>
-                            <a href="<?php echo base_url() ?>buku/hapus/<?php echo $hasil->id_buku ?>" data-toggle="modal" data-target="#modalHapus" class="btn confirm-delete btn-sm btn-danger">Hapus</a>
-                            </div>
+                            <button class="btn confirm-delete btn-sm btn-danger" onclick="hapus_data(<?php echo $hasil->id_buku ?>)">Hapus</button>
+                        </div>
                     </td>
                   </tr>
 
@@ -136,20 +137,43 @@
         removeData = $(this).find('.danger');
 })
 
-$('.confirm-delete').on('click', function(e) {
-    e.preventDefault();
-
-    var id = $(this).data('id');
-    $('#modalHapus').data('id', id).modal('show');
-});
-
-$('#btnDel').click(function() {
-    // handle deletion here
-    var id = $('#modalHapus').data('id');
-    $('[id-buku='+id+']').remove();
-    $('#modalHapus').modal('hide');
-}); 
+function hapus_data(id) {
+    swal({
+            title: "Apa Anda Yakin?",
+            text: "Saat menghapusnya Anda tidak akan bisa mengembalikannya seperti semula!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                window.location = '<?php echo base_url() ?>buku/hapus/'+id;
+            } else {
+                swal("Data Anda berhasil diamankan!");
+            }
+        });
+}
 </script>
+<?php if (isset($_SESSION['error'])): ?>
+            <script>
+              swal({
+              title: "Error!",
+              text: "<?php echo $_SESSION['error'] ?>",
+              icon: "error",
+          });
+            </script>
+        <?php unset($_SESSION['error']) ?>
+          <?php endif ?>
+          <?php if (isset($_SESSION['success'])): ?>
+            <script>
+              swal({
+              title: "Berhasil!",
+              text: "<?php echo $_SESSION['success'] ?>",
+              icon: "success",
+          });
+            </script>
+        <?php unset($_SESSION['success']) ?>
+          <?php endif ?>
 
 </body>
 </html>
