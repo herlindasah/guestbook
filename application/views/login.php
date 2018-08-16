@@ -83,9 +83,13 @@
             display: block;
             margin-top: 10px;
         }
+        .background-login {
+            background: url('<?php echo base_url() ?>assets/img/office.jpg');
+            background-size: cover;
+        }
     </style>
 </head>
-<body style="background-image: url('<?php echo base_url() ?>assets/img/office.jpg') cover;>">
+<body class="background-login">
 <div class="container" style="margin-top: 50px">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
