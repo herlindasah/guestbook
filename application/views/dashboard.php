@@ -9,15 +9,14 @@
 </head>
 
 <body>
-  <div class="nav-wrapper" style="height:51px;"> 
-    
+  <div class="nav-wrapper">
     <nav class="navbar navbar-inverse navbar-fixed-top">
           <nav class="navbar bottom-color light-bg">
             <div class="container">
             <a class="navbar-brand" href="<?php echo base_url() ?>dashboard">Buku Tamu PGN COM</a>
            
-            <div class="logo">
-              <img src="<?php echo base_url() ?>assets/img/pgascom.png" /></div>
+           <!-- <div class="logo">
+              <img src="<?php echo base_url() ?>assets/img/pgascom.png" /></div> -->
 
               <div class="navbar-form navbar-right">
                 <a href="<?php echo base_url() ?>index.php/dashboard/logout" type="submit" class="btn btn-success"><i class="fa fa-sign-out"></i> Logout</a>
@@ -40,19 +39,19 @@
       </div>
     </nav>
 
-    <div class="container">  
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
+  <main role="main">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
+
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
     </ol>
 
-    <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active">
-        <img src="<?php echo base_url(); ?>assets/img/p.jpg" alt="PGN COM" style="width:100%; height:660px;">
+      <div class="item active" class="responsive">
+        <img src="<?php echo base_url(); ?>assets/img/p.jpg" alt="PGN COM" style="min-width: 1300px;">
       </div>
 
       <div class="item">
@@ -66,7 +65,6 @@
   </div>
 </div>
 
-    <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left"></span>
       <span class="sr-only">Previous</span>
@@ -75,12 +73,14 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
+
   </div>
 </div>
 
-<div class="footer">
+<div class="footer" align="center">
   <br>
   <p>Copyright by PGN COM</p>
+</div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
