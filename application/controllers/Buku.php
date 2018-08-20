@@ -45,7 +45,7 @@ class Buku extends CI_Controller {
             'tanggal_berkunjung'=> date('Y-m-d'),
             'keperluan'         => $this->input->post("keperluan"),
             'bertemu'           => $this->input->post("bertemu"),
-            'jam_datang'        => date('H:i:s', strtotime('+5 hour'))
+            'jam_datang'        => date('H:i:s', strtotime('+5 hour')),
         );
 
         $this->model_buku->simpan($data);

@@ -53,18 +53,11 @@
    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-         <a class="navbar-brand" href="<?php echo base_url() ?>dashboard">Buku Tamu PGN COM</a>
+         <a class="navbar-brand">Buku Tamu PGN COM</a>
               <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url() ?>dashboard">Home</a></li>
-                <li class="active"><a href="<?php echo base_url() ?>buku">Buku Tamu</a></li>
-                <li><a href="#">Statistik & Report</a></li> 
-                <li><a href="#">About</a></li>
+                <li class="active"><a href="<?php echo base_url() ?>tamu">Buku Tamu</a></li>
               </ul>
         </div>
-
-         <div class="navbar-form navbar-right">
-                <a href="<?php echo base_url() ?>index.php/dashboard/logout" type="submit" class="btn btn-success"><i class="fa fa-sign-out"></i> Logout</a>
-            </div>
       </div>
     </nav>
 
@@ -76,7 +69,7 @@
           <br>
           <br>
 
-            <?php echo form_open('buku/simpan') ?>
+            <?php echo form_open('tamu/simpan') ?>
               <div class="form-group">
                 <label for="text">No Telp</label>
                 <div class="input-group" style="width: 650px">
@@ -126,9 +119,9 @@
                     <span class="input-group-text" id="basic-addon2"></span>
                   </div>
                 </div>
-                <?php $guest = $this->model_buku->get_guest(); ?>
-                <datalist id="guest">
-                  <?php foreach ($guest as $bertemu): ?>
+                <?php $gtamu = $this->model_tamu->get_guest(); ?>
+                <datalist id="gtamu">
+                  <?php foreach ($gtamu as $bertemu): ?>
                     <option value="<?php echo $bertemu->bertemu ?>"><?php echo $bertemu->bertemu ?></option>
                   <?php endforeach ?>
                 </datalist>

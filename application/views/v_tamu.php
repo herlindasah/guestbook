@@ -15,18 +15,12 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-         <a class="navbar-brand" href="<?php echo base_url() ?>dashboard">Buku Tamu PGN COM</a>
+         <a class="navbar-brand">Buku Tamu PGN COM</a>
               <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url() ?>dashboard">Home</a></li>
-                <li class="active"><a href="<?php echo base_url() ?>buku">Buku Tamu</a></li>
-                <li><a href="">Statistik & Report</a></li> 
-                <li><a href="#">About</a></li>
+                <li class="active"><a href="<?php echo base_url() ?>tamu">Buku Tamu</a></li>
               </ul>
 
         </div>
-         <div class="navbar-form navbar-right">
-                <a href="<?php echo base_url() ?>index.php/dashboard/logout" type="submit" class="btn btn-success"><i class="fa fa-sign-out"></i> Logout</a>
-            </div>
       </div>
     </nav>
 
@@ -34,7 +28,7 @@
 
     <div class="container" style="margin-top: 80px; margin-bottom: 80px">
         <?php echo $this->session->flashdata('notif') ?>
-        <a href="<?php echo base_url() ?>buku/tambah/" class="btn btn-md btn-success">Tambah Tamu</a>
+        <a href="<?php echo base_url() ?>tamu/tambah/" class="btn btn-md btn-success">Tambah Tamu</a>
         <hr>
         <!-- table -->
         <div class="table-responsive">
@@ -56,7 +50,7 @@
 
                 <?php
                     $no = 1; 
-                    foreach($data_tamu as $hasil){ 
+                    foreach($v_tamu as $hasil){ 
                 ?>
 
                   <tr>
@@ -69,30 +63,11 @@
                     <td><?php echo $hasil->bertemu ?></td>
                     <td><?php echo $hasil->keperluan ?></td>
                     <td>
-                        <div class="btn-group">
-                            <a href="<?php echo base_url() ?>buku/edit/<?php echo $hasil->id_buku ?>" class="btn btn-sm btn-success">Edit</a>
-                            <button class="btn confirm-delete btn-sm btn-danger" onclick="hapus_data(<?php echo $hasil->id_buku ?>)">Hapus</button>
-                        </div>
                     </td>
                   </tr>
 
                 <?php } ?>
 
-                <!-- modal Hapus -->
-                 <div id="modalHapus" tabindex="-1" role="dialog" class="modal fade">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h3>Perhatian!</h3>
-                            </div>
-                            <div class="modal-body">
-                                <p>Apakah anda yakin ingin menghapus data tamu ini?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" id="btnDel" class="btn btn-danger">Delete</a>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true" class="btn secondary">Cancel</a>
-                                    </div>
-                                </div>
                 </tbody>
               </table>
         </div>
@@ -117,30 +92,6 @@
     } );
 </script>
 
-<!-- Function hapus -->
-<script>
-   $('#modalHapus').on('show', function() {
-    var id = $(this).data('id'),
-        removeData = $(this).find('.danger');
-})
-
-function hapus_data(id) {
-    swal({
-            title: "Apa Anda Yakin?",
-            text: "Saat menghapusnya Anda tidak akan bisa mengembalikannya seperti semula!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-        .then((willDelete) => {
-            if (willDelete) {
-                window.location = '<?php echo base_url() ?>buku/hapus/'+id;
-            } else {
-                swal("Data Anda berhasil diamankan!");
-            }
-        });
-}
-</script>
 <?php if (isset($_SESSION['error'])): ?>
             <script>
               swal({
