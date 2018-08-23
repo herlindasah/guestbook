@@ -20,7 +20,7 @@
               <ul class="nav navbar-nav">
                 <li><a href="<?php echo base_url() ?>dashboard">Home</a></li>
                 <li class="active"><a href="<?php echo base_url() ?>buku">Buku Tamu</a></li>
-                <li><a href="#">Statistik & Report</a></li> 
+                <li><a href="<?php echo base_url('buku/statistik') ?>">Statistik & Report</a></li> 
                 <li><a href="#">About</a></li>
               </ul>
 
