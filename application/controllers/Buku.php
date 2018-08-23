@@ -76,11 +76,12 @@ class Buku extends CI_Controller {
         $id['id_buku'] = $this->input->post("id_buku");
         $data = array(
 
-            'no_telp'           => $this->input->post("no_telp"),
-            'nama_tamu'         => $this->input->post("nama_tamu"),
-            'instansi'          => $this->input->post('instansi'),
+            'no_telp'               => $this->input->post("no_telp"),
+            'nama_tamu'             => $this->input->post("nama_tamu"),
+            'instansi'              => $this->input->post('instansi'),
             'tanggal_berkunjung'    => $this->input->post("tanggal_berkunjung"),
-            'keperluan'         => $this->input->post("keperluan"),
+            'bertemu'               => $this->input->post("bertemu"),
+            'keperluan'             => $this->input->post("keperluan"),
 
         );
 

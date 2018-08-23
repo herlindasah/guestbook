@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -6,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>Buku Tamu PGN COM</title>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
@@ -16,12 +15,10 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-         <a class="navbar-brand" href="<?php echo base_url() ?>dashboard">Buku Tamu PGN COM</a>
+         <a class="navbar-brand" href="#">Buku Tamu PGN COM</a>
               <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url() ?>dashboard">Home</a></li>
                 <li class="active"><a href="<?php echo base_url() ?>buku">Buku Tamu</a></li>
-                <li><a href="#">Statistik & Report</a></li> 
-                <li><a href="#">About</a></li>
+                <li><a href="">Statistik & Report</a></li>
               </ul>
 
         </div>
@@ -30,6 +27,8 @@
             </div>
       </div>
     </nav>
+
+    <br>
 
     <div class="container" style="margin-top: 80px; margin-bottom: 80px">
         <?php echo $this->session->flashdata('notif') ?>
@@ -48,7 +47,7 @@
                     <th>Jam Datang</th>
                     <th>Bertemu Dengan</th>
                     <th>Keperluan</th>
-                    <th>Options</th>
+                    <th style="width: 10.5%">Options</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -97,25 +96,7 @@
         </div>
     </div>
 
-     <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h4 class="modal-title">Perhatian!</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <p>Apakah Anda yakin ingin menghapus data tamu ini?</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Batalkan</button>
-                                                <button type="button" class="btn btn-danger">Hapus</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-
-    <div class="footer">
-        <div class="container-fluid">
+    <div class="footer" align="center">
         <br>
         <p>Copyright by PGN COM</p>
     </div>
