@@ -45,7 +45,7 @@ class Buku extends CI_Controller {
             'tanggal_berkunjung'=> date('Y-m-d'),
             'keperluan'         => $this->input->post("keperluan"),
             'bertemu'           => $this->input->post("bertemu"),
-            'jam_datang'        => date('H:i:s', strtotime('+5 hour')),
+            'jam_datang'        => date('H:i:s', strtotime('+5 hour'))
         );
 
         $this->model_buku->simpan($data);
@@ -76,12 +76,11 @@ class Buku extends CI_Controller {
         $id['id_buku'] = $this->input->post("id_buku");
         $data = array(
 
-            'no_telp'               => $this->input->post("no_telp"),
-            'nama_tamu'             => $this->input->post("nama_tamu"),
-            'instansi'              => $this->input->post('instansi'),
+            'no_telp'           => $this->input->post("no_telp"),
+            'nama_tamu'         => $this->input->post("nama_tamu"),
+            'instansi'          => $this->input->post('instansi'),
             'tanggal_berkunjung'    => $this->input->post("tanggal_berkunjung"),
-            'bertemu'               => $this->input->post("bertemu"),
-            'keperluan'             => $this->input->post("keperluan"),
+            'keperluan'         => $this->input->post("keperluan"),
 
         );
 

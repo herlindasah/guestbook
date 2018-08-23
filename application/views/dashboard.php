@@ -31,7 +31,7 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="<?php echo base_url() ?>dashboard">Home</a></li>
                 <li><a href="<?php echo base_url() ?>buku">Buku Tamu</a></li>
-                <li><a href="<?php echo base_url() ?>chart">Statistik & Report</a></li> 
+                <li><a href="#">Statistik & Report</a></li> 
                 <li><a href="#">About</a></li>
               </ul>
 
@@ -39,9 +39,8 @@
       </div>
     </nav>
 
-  <main role="main">
-
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
+   <div class="container">  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -51,7 +50,7 @@
 
     <div class="carousel-inner">
       <div class="item active" class="responsive">
-        <img src="<?php echo base_url(); ?>assets/img/p.jpg" alt="PGN COM" style="min-width: 1300px;">
+        <img src="<?php echo base_url(); ?>assets/img/p.jpg" alt="PGN COM" style="width:100%; height:660px;">
       </div>
 
       <div class="item">
@@ -77,7 +76,7 @@
   </div>
 </div>
 
-<div class="footer" align="center">
+<div class="footer">
   <br>
   <p>Copyright by PGN COM</p>
 </div>

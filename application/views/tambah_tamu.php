@@ -72,10 +72,6 @@
     <div class="container" style="margin-top: 80px">
         <div class="col-lg-8 offset-lg-2">
 
-          <br>
-          <br>
-          <br>
-
             <?php echo form_open('buku/simpan') ?>
               <div class="form-group">
                 <label for="text">No Telp</label>
@@ -88,7 +84,7 @@
               </div>
 
               <div class="form-group">
-                <label for="text">Nama Tamu</label>
+                <label for="text">Nama Anda</label>
                 <div class="input-group" style="width: 650px">
                   <input type="text" class="form-control" name="nama_tamu" placeholder="Your Name" required>
                   <div class="input-group-append">
@@ -107,16 +103,15 @@
                 </div>
               </div>
 
-              <label for="text">Keperluan</label><br>
-              <select class="form-control" name="keperluan" style="width: 650px">
-                    <option value="">--Pilih Keperluan--</option>
-                    <option value="PKL">PKL</option>
-                    <option value="Magang (Internship)">Magang (Internship)</option>
-                    <option value="Kerjasama">Kerjasama</option>
-                    <option value="Interview">Interview</option>
-                    <option value="Bisnis">Bisnis</option>
-                    <option value="Lainnya">Lainnya</option>
-                  </select><br>
+              <div class="form-group">
+                <label for="text">Keperluan</label>
+                <div class="input-group" style="width: 650px">
+                  <input type="text" class="form-control" name="keperluan" placeholder="Purpose" required>
+                  <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2"></span>
+                  </div>
+                </div>
+              </div>
 
               <div class="form-group">
                 <label for="text">Bertemu</label>
@@ -126,19 +121,23 @@
                     <span class="input-group-text" id="basic-addon2"></span>
                   </div>
                 </div>
-                <?php $guest = $this->model_buku->get_guest(); ?>
-                <datalist id="guest">
-                  <?php foreach ($guest as $bertemu): ?>
+                <?php $pegawai = $this->model_buku->get_pegawai(); ?>
+                <datalist id="pegawai">
+                  <?php foreach ($pegawai as $bertemu): ?>
                     <option value="<?php echo $bertemu->bertemu ?>"><?php echo $bertemu->bertemu ?></option>
                   <?php endforeach ?>
                 </datalist>
               </div>
 
               <button type="submit" class="btn btn-md btn-primary">Simpan</button>
-              <button type="reset" class="btn btn-md btn-secondary btn-warning">Reset</button>
+              <button type="reset" class="btn btn-md btn-secondary btn-warning">reset</button>
             <?php echo form_close() ?>
         </div>
     </div>
+
+    <div class="footer" align="center">
+    <br>
+    <p>Copyright by PGN COM</p>
 
 </body>
 

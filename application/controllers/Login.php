@@ -16,7 +16,7 @@ class Login extends CI_Controller {
             if($this->admin->logged_id())
             {
                 //jika memang session sudah terdaftar, maka redirect ke halaman dahsboard
-                redirect("buku");
+                redirect("dashboard");
 
             }else{
 
@@ -52,7 +52,7 @@ class Login extends CI_Controller {
                         //set session userdata
                         $this->session->set_userdata($session_data);
 
-                        redirect('buku/');
+                        redirect('dashboard/');
 
                     }
                 }else{

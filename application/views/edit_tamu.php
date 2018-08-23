@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
-
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -26,57 +25,45 @@
       </div>
     </nav>
 
-    <br>
-    <br>
-
-    <div class="container" style="margin-top: 80px" align="center">
+    <div class="container" style="margin-top: 80px">
         <div class="col-md-12">
             <?php echo form_open('buku/update') ?>
 
-              <div class="form-group" style="width: 650px">
+              <div class="form-group">
                 <label for="text">No Telp</label>
                 <input type="text" name="no_telp" value="<?php echo $data_tamu->no_telp ?>" class="form-control" placeholder="Masukkan No. Telp">
                 <input type="hidden" value="<?php echo $data_tamu->id_buku ?>" name="id_buku">
               </div>
 
-              <div class="form-group" style="width: 650px">
+              <div class="form-group">
                 <label for="text">Nama Tamu</label>
                 <input type="text" name="nama_tamu" value="<?php echo $data_tamu->nama_tamu ?>" class="form-control" placeholder="Masukkan Nama Tamu">
               </div>
 
-              <div class="form-group" style="width: 650px">
+              <div class="form-group">
                 <label for="text">Instansi</label>
                 <input type="text" name="instansi" value="<?php echo $data_tamu->instansi ?>" class="form-control" placeholder="Masukkan Nama Instansi">
               </div>
 
-              <div class="form-group" style="width: 650px">
+              <div class="form-group">
                 <label for="text">Tanggal Berkunjung</label>
                 <input type="date" name="tanggal_berkunjung" value="<?php echo $data_tamu->tanggal_berkunjung ?>" class="form-control" >
               </div>
 
-              <label for="text">Keperluan</label><br>
-              <select class="form-control" name="keperluan" style="width: 650px">
-                    <option value="">--Pilih Keperluan--</option>
-                    <option value="PKL">PKL</option>
-                    <option value="Magang (Internship)">Magang (Internship)</option>
-                    <option value="Kerjasama">Kerjasama</option>
-                    <option value="Interview">Interview</option>
-                    <option value="Bisnis">Bisnis</option>
-                    <option value="Lainnya">Lainnya</option>
-                  </select><br>
-
-               <div class="form-group" style="width: 650px">
-                <label for="text">Bertemu</label>
-                <input type="text" name="bertemu" value="<?php echo $data_tamu->bertemu ?>" class="form-control" placeholder="Masukkan Nama Yang Dituju">
+              <div class="form-group">
+                <label for="text">Keperluan</label>
+                <input type="text" name="keperluan" value="<?php echo $data_tamu->keperluan ?>" class="form-control" >
               </div>
-              <br>
-              <br>
 
               <button type="submit" class="btn btn-md btn-success">Update</button>
-              <button type="reset" class="btn btn-md btn-warning">Reset</button>
+              <button type="reset" class="btn btn-md btn-warning">reset</button>
             <?php echo form_close() ?>
         </div>
     </div>
+
+     <div class="footer" align="center">
+      <br>
+     <p>Copyright by PGN COM</p>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>
