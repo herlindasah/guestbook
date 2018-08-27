@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="shortcut icon" href="<?php echo base_url('assets/img/pgn.jpg')?>"/>
 <title>Guest-Book PGASCOM</title>
 <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.png" type="image/png" sizes="16x16">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +26,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header page-scroll">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-          <a class="navbar-brand page-scroll" href="#main">PGASCOM</a> </div>
+          <a class="navbar-brand page-scroll" href="#main"></a></div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
@@ -33,7 +34,7 @@
             <li><a class="page-scroll" href="#classes">About</a></li>
             <li><a class="page-scroll" href="#features">Product</a></li>
             <li><a class="page-scroll" href="#review">Gallery</a></li>
-            <li><a class="page-scroll" href="<?php echo base_url() ?>index.php/tamu">Guest</a></li>
+            <li><a class="page-scroll" href="<?php echo base_url() ?>tamu">Guest</a></li>
             <li><a class="page-scroll" href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -50,7 +51,7 @@
           <div class="hero-content text-center">
             <h1 class="wow fadeInUp" data-wow-delay="0.1s">GUEST-BOOK PGASCOM</h1>
             <p class="wow fadeInUp" data-wow-delay="0.2s"> The organized front office is where all the journey begin. </p>
-            <a href="<?php echo base_url() ?>index.php/login" class="btn btn-action wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Login Admin</a> </div>
+            <a href="<?php echo base_url() ?>login" class="btn btn-action wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Login Admin</a> </div>
         </div>
       </div>
     </div>
@@ -61,26 +62,26 @@
           <h1 class="wow fadeInDown" data-wow-delay="0.2s">PGASCOM</h1>
           <p class="wow fadeInDown" data-wow-delay="0.2s">Provides A Leading Solution In Information Technology & Communication</p>
         </div>
-        <div class="col-md-12">
+<div class="col-md-12">
           <div class="col-md-4 wow fadeInDown" data-wow-delay="0.2s">
             <div class="pitch-icon"> <i class="ion-ios-folder-outline"></i> </div>
             <div class="pitch-content">
-              <h1>Personal Training</h1>
-              <p> Aliquam vel euismod elit, sed suscipit est. Sed tincidunt venenatis ligula ac luctus. Fusce egestas volutpat mi sed pellentesque. </p>
+              <h1>SUBSIDIARY OF PGN</h1>
+              <p>PGASCOM is a subsidiary of PT. Perusahaan Gas Negara (Persero) Tbk. PT. PGAS Telekomunikasi Nusantara (PGASCOM) is a Telecommunication Provider and ICT Solution company. </p>
             </div>
           </div>
           <div class="col-md-4 wow fadeInDown" data-wow-delay="0.2s">
             <div class="pitch-icon"> <i class="ion-ios-mic-outline"></i> </div>
             <div class="pitch-content">
-              <h1>Crossfit</h1>
-              <p> Aliquam vel euismod elit, sed suscipit est. Sed tincidunt venenatis ligula ac luctus. Fusce egestas volutpat mi sed pellentesque. </p>
+              <h1>EXPERIENCED</h1>
+              <p>PGASCOM was started on January 10, 2007. The PGASCOM's FO network can be reached by various domestic and international area industries. The company is focused as a provider of large capacity and reliable network with submarine cable strength, equipped with rock dumping and landing point protection, situated in the western Singapore which is different compared to other operators.</p>
             </div>
           </div>
            <div class="col-md-4 wow fadeInDown" data-wow-delay="0.2s">
             <div class="pitch-icon"> <i class="ion-ios-folder-outline"></i> </div>
             <div class="pitch-content">
-              <h1>Freestyle Training</h1>
-              <p> Aliquam vel euismod elit, sed suscipit est. Sed tincidunt venenatis ligula ac luctus. Fusce egestas volutpat mi sed pellentesque. </p>
+              <h1>DOMESTIC & INTERNATIONAL</h1>
+              <p> PGASCOM network spreads in various domestic areas ranging from Batam to Surabaya and international areas, in which PGASCOM through its subsidiary company, PGAS International, is ready to serve the needs of customers abroad.</p>
             </div>
           </div>
         </div>
@@ -90,10 +91,15 @@
       <div class="feature-sub">
       <div class="container">
         <div class="sub-inner">
-          <h1 class="wow fadeInUp">If it’s not personal, It’s not possible! See The Results and Feel the difference immediatly.</h1>
-          <a href="#" class="btn btn-action wow fadeInUp">Get Started</a> </div>
+          <h1 class="wow fadeInUp">VISION</h1>
+          <h1 class="wow fadeInUp">To become a leading provider solution in information technology and communication in Indonesia</h1>
+           <h1 class="wow fadeInUp">MISSION</h1>
+            <h1 class="wow fadeInUp">To develop the needs of telecommunication business for domestic and international market</h1>
+            <h1 class="wow fadeInUp">To provide a solution in information technology and communication for supporting PGN & Group and other energy industries</h1>
+        </div>
       </div>
     </div>
+
 
     <!-- Features Section -->
    <!-- <div class="app-features text-center" id="features">
@@ -206,117 +212,6 @@
         </div>
       </div>
     </div>
-     <!-- Bold call to action Section -->
-    <!--<div class="feature-sub">
-      <div class="container">
-        <div class="sub-inner">
-          <h1 class="wow fadeInUp">If it’s not personal, It’s not possible! See The Results and Feel the difference immediatly.</h1>
-          <a href="#" class="btn btn-action wow fadeInUp">Get Started</a> </div>
-      </div>
-    </div>
-     <!-- Client Section -->
-    <div class="review-section" id="review">
-       <div class="container">  
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="<?php echo base_url();?>assets/images/p.jpg" alt="PGN COM" style="width:100%; height:660px;">
-      </div>
-
-      <div class="item">
-        <img src="<?php echo base_url();?>assets/images/p1.jpg" alt="PGN COM1" style="width:100%; height:660px;">
-      </div>
-    
-      <div class="item">
-        <img src="<?php echo base_url();?>assets/images/p2.jpg" alt="PGN COM2" style="width:100%; height:660px;">
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-</div>
-</div>
-
-    <!-- Package Section -->
-   <!-- <div id="pricing" class="pricing-section text-center"> 
-      <div class="container">
-        <div class="col-md-12 col-sm-12 nopadding">
-          <div class="pricing-intro">
-            <h1 class="wow fadeInUp" data-wow-delay="0s">PACKAGES</h1>
-            <p class="wow fadeInUp" data-wow-delay="0.2s"> Lorem ipsum dolor sit. Incidunt laborum beatae earum nihil odio consequatur officiis <br class="hidden-xs">
-              tempore consequuntur officia ducimus unde doloribus quod unt repell </p>
-          </div>
-          <div class="col-sm-6">
-            <div class="table-left wow fadeInUp" data-wow-delay="0.4s">
-              <div class="pricing-details">
-                <h2>For Beginners</h2>
-                <span>$49.50</span>
-                <ul>
-                  <li>Consectetur adipiscing</li>
-                  <li>Nunc luctus nulla et tellus</li>
-                  <li>Suspendisse quis metus</li>
-                  <li>Vestibul varius fermentum erat</li>
-                </ul>
-                <button class="btn btn-primary btn-action btn-fill">Get Plan</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="table-right wow fadeInUp" data-wow-delay="0.6s">
-              <div class="pricing-details">
-                <h2>For Professionals</h2>
-                <span>$99.50</span>
-                <ul>
-                  <li>Consectetur adipiscing</li>
-                  <li>Nunc luctus nulla et tellus</li>
-                  <li>Suspendisse quis metus</li>
-                  <li>Vestibul varius fermentum erat</li>
-                </ul>
-                <button class="btn btn-primary btn-action btn-fill">Get Plan</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Subscribe Form -->
-    <!-- <div class="cta-sub no-color">
-      <div class="container">
-        <div class="cta-inner">
-          <h1 class="wow fadeInUp" data-wow-delay="0s">Sign Up to Our Newsletter and get exciting offers</h1>
-          <p class="wow fadeInUp" data-wow-delay="0.2s"> Enter your email address we promise, never disclose<br class="hidden-xs">
-            or sell your email address. </p>
-          <div class="form wow fadeInUp" data-wow-delay="0.3s">
-            <form class="subscribe-form center-form wow zoomIn" action="php/subscribe.php" method="post" name="subscribeform" id="subscribeform">
-              <input class="mail" type="email" name="email" placeholder="Join the wait list" autocomplete="off" id="subemail">
-              <input class="submit-button" type="submit" value="Subscribe" name="send" id="subsubmit">
-            </form>
-            <!-- subscribe message -->
-            <!-- <div id="mesaj"></div>
-            <!-- subscribe message --> 
-          <!--</div>
-        </div>
-      </div>
-    </div> 
     
     <!-- Footer Section -->
     <div class="footer" id="contact">

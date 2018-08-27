@@ -4,8 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Buku Tamu PGN COM</title>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="shortcut icon" href="<?php echo base_url('assets/img/pgn.jpg')?>"/>
+    <title>Guest-Book PGASCOM</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
@@ -15,11 +16,10 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-         <a class="navbar-brand">Buku Tamu PGN COM</a>
-              <ul class="nav navbar-nav">
-                <li class="active"><a href="<?php echo base_url() ?>tamu">Buku Tamu</a></li>
-              </ul>
-
+          <a class="navbar-brand" href="<?php echo base_url() ?>welcome">Guest-Book PGASCOM</a>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="<?php echo base_url() ?>tamu">Buku Tamu</a></li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -42,7 +42,7 @@
                     <th>Tanggal Berkunjung</th>
                     <th>Jam Datang</th>
                     <th>Bertemu Dengan</th>
-                    <th>Keperluan</th>
+                    <th style="width: 10.5%">Keperluan</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -61,8 +61,6 @@
                     <td><?php echo $hasil->jam_datang ?></td>
                     <td><?php echo $hasil->bertemu ?></td>
                     <td><?php echo $hasil->keperluan ?></td>
-                    <td>
-                    </td>
                   </tr>
 
                 <?php } ?>

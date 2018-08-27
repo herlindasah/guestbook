@@ -105,4 +105,17 @@ class Buku extends CI_Controller {
 
     }
 
+    public function statistik()
+    {
+        $data = array(
+
+            'title'     => 'Data Tamu',
+            'data_tamu' => $this->model_buku->for_grafik(),
+            'row_data' => $this->model_buku->get_row_column()
+
+        );
+
+        $this->load->view('data_statistik', $data);
+    }
+
 }

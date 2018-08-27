@@ -25,6 +25,31 @@ class Model_buku extends CI_model{
 
     }
 
+    public function for_grafik()
+    {
+        $this->db->distinct();
+        $query = $this->db->select('keperluan')->get('tbl_buku');
+          
+        if($query->num_rows() > 0){
+            return $query->result();
+        }
+    }
+
+    public function get_row_column()
+    {   
+        $this->db->distinct();
+        $this->db->select('keperluan');
+        $query = $this->db->get('tbl_buku')->result();
+
+        $row = array();
+        foreach ($query as $q) {
+            $this->db->reset_query();
+            array_push($row, $this->db->get_where('tbl_buku', array('keperluan'=>$q->keperluan))->num_rows());
+        }
+
+        return $row;
+    }
+
     public function edit($id_buku)
     {
 

@@ -4,7 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Buku Tamu PGN COM</title>
+  <link rel="shortcut icon" href="<?php echo base_url('assets/img/pgn.jpg')?>"/>
+    <title>Guest-Book PGASCOM</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
@@ -15,12 +16,11 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-         <a class="navbar-brand" href="#">Buku Tamu PGN COM</a>
+         <a class="navbar-brand" href="<?php echo base_url() ?>index.php/welcome">Guest-Book PGASCOM</a>
               <ul class="nav navbar-nav">
                 <li class="active"><a href="<?php echo base_url() ?>buku">Buku Tamu</a></li>
-                <li><a href="">Statistik & Report</a></li>
+                <li><a href="<?php echo base_url('buku/statistik') ?>">Statistik & Report</a></li> 
               </ul>
-
         </div>
          <div class="navbar-form navbar-right">
                 <a href="<?php echo base_url() ?>index.php/dashboard/logout" type="submit" class="btn btn-success"><i class="fa fa-sign-out"></i> Logout</a>
@@ -96,10 +96,12 @@
         </div>
     </div>
 
+<!--
     <div class="footer" align="center">
         <br>
         <p>Copyright by PGN COM</p>
     </div>
+-->
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
