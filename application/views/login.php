@@ -54,6 +54,11 @@
             margin-bottom: 20px;
         }
 
+        .input.transparent-input{
+            background-color:rgba(0,0,0,0) !important;
+            border:none !important;
+        }
+
         .login-box input[type="text"], input[type="password"]
         {
             border: none;
@@ -94,6 +99,7 @@
         {
             color: grey
         }
+
     </style>
 </head>
 <body>
@@ -102,11 +108,11 @@
         <h1>Login Admin</h1>
          <form class="form-login" method="POST" action="<?php echo base_url() ?>login">
             <label>Username</label>
-            <input type="text" name="username" placeholder="Enter Username"><?php echo form_error('username'); ?>
+            <input type="text" name="username" placeholder="Enter Username">
             <label>Password</label>
-            <input type="password" name="password" placeholder="Enter Password"><?php echo form_error('password'); ?>
+            <input type="password" name="password" placeholder="Enter Password">
             <input type="submit" name="submit" value="Login">
-            <a href="#">Forgot the password?</a>    
+            <a href="<?php echo base_url() ?>forgot">Forgot the password?</a>    
         </form>
     </div>
 </body>

@@ -30,7 +30,43 @@
       </div>
     </nav>
 
-    <div class="container" style="margin-top: 80px; margin-bottom: 80px">
+ <div class="container" style="margin-top: 80px; margin-bottom: 80px">
+
+    <br>
+
+<!-- Bulan -->
+    <div class="form-group">
+        <label for="text">Laporan Kunjungan Tamu PGASCOM</label><br>
+        <select name="bulan">
+            <option value="01">Januari</option>
+            <option value="02">Februari</option>
+            <option value="03">Maret</option>
+            <option value="04">April</option>
+            <option value="05">Mei</option>
+            <option value="06">Juni</option>
+            <option value="07">Juli</option>
+            <option value="08">Agustus</option>
+            <option value="09">September</option>
+            <option value="10">Oktober</option>
+            <option value="12">November</option>
+            <option value="12">Desember</option>
+        </select>
+
+<!-- Tahun -->
+    <select name="tahun">
+        <?php
+        $mulai= date('Y') - 50;
+        for($i = $mulai;$i<$mulai + 100;$i++){
+            $sel = $i == date('Y') ? ' selected="selected"' : '';
+            echo '<option value="'.$i.'"'.$sel.'>'.$i.'</option>';
+        }
+        ?>
+    </select>
+
+    <a href="#" class="btn confirm-proses btn-md btn-primary">Proses</button>
+    </a>
+</div>
+
         <?php
             foreach($data_tamu as $data){
                 $keperluan[] = $data->keperluan;
@@ -48,7 +84,7 @@
                 data: {
                     labels: <?php echo json_encode($keperluan) ?>,
                     datasets: [{
-                        label: "Data",
+                        label: "Statistik Tamu PGASCOM",
                         backgroundColor: ['rgb(255, 99, 132)','rgb(255, 132, 99)','rgb(132, 255, 99)','rgb(132, 99, 255)','rgb(99, 255, 132)','rgb(99, 132, 255)',],
                         borderColor: 'rgb(255, 99, 132)',
                         data: <?php echo json_encode($row_data) ?>,
@@ -67,11 +103,6 @@
                 }
             });
         </script>
-    </div>
-
-    <div class="footer" align="center">
-        <br>
-        <p>Copyright by PGN COM</p>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

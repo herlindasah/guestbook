@@ -23,7 +23,7 @@ class Tamu extends CI_Controller {
 
         $this->load->view('v_tamu', $data);
     }
-
+    
     public function tambah()
     {
         $data = array(

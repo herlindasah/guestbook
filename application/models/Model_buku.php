@@ -50,6 +50,26 @@ class Model_buku extends CI_model{
         return $row;
     }
 
+/*
+    public function get_bt($vtanggal){
+
+        $vbulan = date("m",strtotime($vtanggal));
+
+        $this->db->distinct();
+        $this->db->select('keperluan');
+        $query = $this->db->get('tbl_buku')->result();
+
+        $this->db->from('tbl_buku');
+        $this->db->select('tanggal_berkunjung');
+        $this->db->where('month(tanggal_berkunjung)',$vbulan);
+        $this->db->where('year(tanggal_berkunjung)',$vtanggal);
+        $query = $this->db->get();
+        return $query;
+
+    }
+
+    */
+
     public function edit($id_buku)
     {
 
