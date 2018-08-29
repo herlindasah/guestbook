@@ -34,9 +34,12 @@
 
     <br>
 
+    <div class="panel panel-default">
+        <div class="panel-heading" align="center">Grafik Kunjungan Tamu PGASCOM</div>
+        <div class="panel-body">
+
 <!-- Bulan -->
     <div class="form-group">
-        <label for="text">Laporan Kunjungan Tamu PGASCOM</label><br>
         <select name="bulan">
             <option value="01">Januari</option>
             <option value="02">Februari</option>
