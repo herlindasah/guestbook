@@ -118,8 +118,8 @@ class Buku extends CI_Controller {
         $data = array(
 
             'title'     => 'Data Tamu',
-            'data_tamu' => $this->model_buku->for_grafik($bt),
-            'row_data' => $this->model_buku->get_row_column(),
+            'data_tamu' => $this->model_buku->for_grafik(),
+            'row_data' => $this->model_buku->get_row_column($bt),
             // 'bulan_tahun' => $this->model_buku->get_bt(),
 
         );

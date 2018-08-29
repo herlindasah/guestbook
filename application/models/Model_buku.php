@@ -25,18 +25,15 @@ class Model_buku extends CI_model{
 
     }
 
-    public function for_grafik($bt=null)
+    public function for_grafik()
     {
         $this->db->distinct();
-        if (isset($bt)) {
-            $this->db->like('tanggal_berkunjung',$bt,'after');
-        }
         $query = $this->db->select('keperluan')->get('tbl_buku');
           
         return $query->result();
     }
 
-    public function get_row_column()
+    public function get_row_column($bt=null)
     {   
         $this->db->distinct();
         $this->db->select('keperluan');
@@ -45,6 +42,9 @@ class Model_buku extends CI_model{
         $row = array();
         foreach ($query as $q) {
             $this->db->reset_query();
+            if (isset($bt)) {
+                $this->db->like('tanggal_berkunjung',$bt,'after');
+            }
             array_push($row, $this->db->get_where('tbl_buku', array('keperluan'=>$q->keperluan))->num_rows());
         }
 
