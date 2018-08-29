@@ -105,14 +105,22 @@ class Buku extends CI_Controller {
 
     }
 
-    public function statistik()
+    public function input_bulan()
+    {
+        $bulan = $this->input->post('bulan');
+        $tahun = $this->input->post('tahun');
+
+        redirect(base_url('buku/statistik/').$tahun.'-'.$bulan);
+    }
+
+    public function statistik($bt=null)
     {
         $data = array(
 
             'title'     => 'Data Tamu',
-            'data_tamu' => $this->model_buku->for_grafik(),
-            'row_data' => $this->model_buku->get_row_column()
-            'bulan_tahun' => $this->model_buku->get_bt();
+            'data_tamu' => $this->model_buku->for_grafik($bt),
+            'row_data' => $this->model_buku->get_row_column(),
+            // 'bulan_tahun' => $this->model_buku->get_bt(),
 
         );
 

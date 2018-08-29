@@ -37,38 +37,39 @@
     <div class="panel panel-default">
         <div class="panel-heading" align="center">Grafik Kunjungan Tamu PGASCOM</div>
         <div class="panel-body">
+            <form action="<?php echo base_url('buku/input_bulan') ?>" method='POST'>
+                <div class="form-group">
+                    <!-- Bulan -->
+                    <select name="bulan">
+                        <option value="01">Januari</option>
+                        <option value="02">Februari</option>
+                        <option value="03">Maret</option>
+                        <option value="04">April</option>
+                        <option value="05">Mei</option>
+                        <option value="06">Juni</option>
+                        <option value="07">Juli</option>
+                        <option value="08">Agustus</option>
+                        <option value="09">September</option>
+                        <option value="10">Oktober</option>
+                        <option value="12">November</option>
+                        <option value="12">Desember</option>
+                    </select>
 
-<!-- Bulan -->
-    <div class="form-group">
-        <select name="bulan">
-            <option value="01">Januari</option>
-            <option value="02">Februari</option>
-            <option value="03">Maret</option>
-            <option value="04">April</option>
-            <option value="05">Mei</option>
-            <option value="06">Juni</option>
-            <option value="07">Juli</option>
-            <option value="08">Agustus</option>
-            <option value="09">September</option>
-            <option value="10">Oktober</option>
-            <option value="12">November</option>
-            <option value="12">Desember</option>
-        </select>
-
-<!-- Tahun -->
-    <select name="tahun">
-        <?php
-        $mulai= date('Y') - 50;
-        for($i = $mulai;$i<$mulai + 100;$i++){
-            $sel = $i == date('Y') ? ' selected="selected"' : '';
-            echo '<option value="'.$i.'"'.$sel.'>'.$i.'</option>';
-        }
-        ?>
-    </select>
-
-    <a href="#" class="btn confirm-proses btn-md btn-primary">Proses</button>
-    </a>
-</div>
+                    <!-- Tahun -->
+                    <select name="tahun">
+                        <?php
+                        $mulai= date('Y') - 50;
+                        for($i = $mulai;$i<$mulai + 100;$i++){
+                            $sel = $i == date('Y') ? ' selected="selected"' : '';
+                            echo '<option value="'.$i.'"'.$sel.'>'.$i.'</option>';
+                        }
+                        ?>
+                    </select>
+                
+                <!-- Ini harus button type submit, bukan a dengan href='#' ya ga bakal ke mana2 -->
+                    <button class="btn confirm-proses btn-md btn-primary" type="submit">Proses</button>
+                </div>
+            </form>
 
         <?php
             foreach($data_tamu as $data){

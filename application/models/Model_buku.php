@@ -25,14 +25,15 @@ class Model_buku extends CI_model{
 
     }
 
-    public function for_grafik()
+    public function for_grafik($bt=null)
     {
         $this->db->distinct();
+        if (isset($bt)) {
+            $this->db->like('tanggal_berkunjung',$bt,'after');
+        }
         $query = $this->db->select('keperluan')->get('tbl_buku');
           
-        if($query->num_rows() > 0){
-            return $query->result();
-        }
+        return $query->result();
     }
 
     public function get_row_column()
