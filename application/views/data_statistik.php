@@ -41,6 +41,7 @@
                 <div class="form-group">
                     <!-- Bulan -->
                     <select name="bulan">
+                        <option selected disabled>Pilih Bulan</option>
                         <option value="01">Januari</option>
                         <option value="02">Februari</option>
                         <option value="03">Maret</option>
